@@ -1,7 +1,10 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const AboutUser = () => {
     console.log('called');
+    const navigate=useNavigate();
   return (
     <div>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -13,6 +16,7 @@ const AboutUser = () => {
       sheets containing Lorem Ipsum passages, and more recently with desktop
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
+      <Button onClick={()=>navigate('more')}>More About</Button>
     </div>
   );
 };

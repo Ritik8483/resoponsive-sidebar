@@ -17,7 +17,7 @@ const About = () => {
         </tr>
       </thead>
       <tbody>
-        <tr onClick={()=>navigate('/about/about-user/${1}')}>
+        <tr onClick={()=>navigate(`/about/about-user`)}>
           <td>1</td>
           <td>Mark</td>
           <td>Otto</td>
@@ -36,7 +36,6 @@ const About = () => {
         </tr>
       </tbody>
     </Table>
-
     </div>
   )
 }

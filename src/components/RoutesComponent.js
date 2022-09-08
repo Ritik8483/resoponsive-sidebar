@@ -1,5 +1,6 @@
 import React, { Children, lazy } from "react";
 import { Outlet, useRoutes } from "react-router-dom";
+import MoreAbout from "../pages/MoreAbout";
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const About = lazy(() => import("../pages/About"));
@@ -21,15 +22,29 @@ const RoutesComponent = () => {
     },
     {
       path: "/about",
-      element: <Outlet/>,
+      element: <Outlet />,
       children: [
         {
           path: "",
           element: <About />,
         },
+        // {
+        //   path: "about-user",
+        //   element: <AboutUser />,
+        // },
         {
-          path: "about-user:id",
-          element: <AboutUser />,
+          path: "about-user",
+          element: <Outlet />,
+          children:[
+            {
+              path:"",
+              element:<AboutUser/>
+            },
+            {
+              path:'more',
+              element:<MoreAbout/>
+            }
+          ]
         },
       ],
     },
