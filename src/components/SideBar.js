@@ -6,7 +6,7 @@ const SideBar = ({children}) => {
     const [isOpen,setIsOpen]=useState(false);
     const menuItems=[
         {
-            path:'/',
+            path:'/dashboard',
             name:'Dashboard',
             icon:<FaEnvira/>
         },
@@ -40,7 +40,7 @@ const SideBar = ({children}) => {
     ]
   return (
     <div>
-        <div className='container'>
+        <div className='containerBox'>
             <div style={{width:isOpen ? "50px" : "300px"}} className='sidebar'>
                 <div className='top_section'>
                     <h1 style={{display:isOpen ? "none" : "block"}} className='logo'>Logo</h1>
@@ -57,7 +57,7 @@ const SideBar = ({children}) => {
                     ))
                 }
             </div>
-            <div style={{padding:'20px'}}>{children}</div>
+            <div style={{padding:'20px',width:'100%'}}>{children}</div>
         </div>
     </div>
   )

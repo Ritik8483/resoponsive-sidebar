@@ -18,7 +18,8 @@ import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import RoutesComponent from "./components/RoutesComponent";
 import { Suspense } from "react";
-import { Audio } from  'react-loader-spinner'
+import { Audio } from "react-loader-spinner";
+
 function App() {
   return (
     <div>
@@ -34,15 +35,6 @@ function App() {
       <Router>
         <SideBar>
           <RoutesComponent/>
-          {/* <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/comment" element={<Comment />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/product" element={<Product />} />
-            <Route path="/productList" element={<ProductList />} />
-          </Routes> */}
         </SideBar>
       </Router>
       </Suspense>
